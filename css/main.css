@@ -503,7 +503,7 @@ body {
 }
 
 
-.burger {
+.burger-visual {
    flex-grow: 1;
    display: flex;
    justify-content: flex-end;
