@@ -1,7 +1,5 @@
 body {
    font-family: 'Nunito Sans', sans-serif;
-   /* font-family: 'Open Sans', sans-serif;
-   font-family: 'Lato', sans-serif; */
 }
 
 header {
@@ -156,7 +154,7 @@ header {
 /* <main><div class="banner"> */
 
 .banner-box {
-   background: url(../img/banner-sale.jpg) no-repeat center center/ cover;
+   background: url(../img/banner-sale.jpg) no-repeat 0 center/ cover;
    padding: 100px 0 120px 100px;
    margin-bottom: 80px;
 }
@@ -238,6 +236,8 @@ header {
    border: 1px solid #DEDEDE;
    border-radius: 22px;
    padding: 13px 30px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
    appearance: none;
    flex-basis: 279px;
    background: url(../img/arrow.svg) no-repeat 89.5% center /12.79px 7.75px;
@@ -266,6 +266,7 @@ header {
    left: 50%;
    top: 50%;
    transform: translate(-50%, -50%);
+   -o-object-fit: cover;
    object-fit: cover;
    width: 100%;
    height: 430px;
@@ -445,11 +446,12 @@ body {
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
+   padding: 0 15px;
 }
 
 .content {
    flex: 0 0 580px;
-   padding: 170px 0 170px 0;
+   padding: 170px 0;
 }
 
 .content-title {
@@ -528,6 +530,7 @@ body {
    padding-bottom: 45px;
 }
 
+
 .promo,
 .order {
    flex: 0 0 49%;
@@ -569,7 +572,6 @@ body {
    font-size: 15px;
    color: #FAF9F9;
    line-height: 24px;
-   /* padding-bottom: 20px; */
 }
 
 .order {
@@ -588,6 +590,343 @@ body {
 }
 
 .order .text-discount {
-   max-width: 300px;
+   max-width: 306px;
    padding: 10px 0 20px 0;
+}
+
+/* Модальное окно <button class="burger" onclick="openModal()">*/
+
+.burger {
+   background: url(../img/menu-burger.svg) no-repeat center /contain;
+   width: 34px;
+   height: 22px;
+   border: none;
+   cursor: pointer;
+}
+
+.header {
+   gap: 21px;
+}
+
+#modal {
+   max-width: 500px;
+   background: #FFF8DC;
+   text-align: center;
+   position: absolute;
+   top: -400px;
+   left: 0;
+   right: 0;
+   margin: 20px auto 0;
+   padding: 36px 30px;
+   transition: 0.3s;
+   box-sizing: border-box;
+}
+
+#modal .header-nav {
+   flex-direction: column;
+   align-items: center;
+   margin: 0 auto;
+   padding-right: 0;
+}
+
+.burger-close {
+   background: url(../img/close-burger.svg) no-repeat center / contain;
+   width: 22px;
+   height: 22px;
+   border: none;
+   position: absolute;
+   top: 20px;
+   right: 20px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+
+/* Responsive */
+
+
+@media (min-width: 981px) {
+   .footer-list+.footer-list-tel {
+      display: none;
+   }
+}
+
+@media (min-width: 761px) {
+   .header-burger {
+      display: none;
+   }
+}
+
+@media (max-width: 1179px) {
+   .img-burger {
+      width: 770px;
+   }
+}
+
+@media (max-width: 1122px) {
+   .img-burger {
+      width: 715px;
+   }
+}
+
+@media (max-width: 1057px) {
+   .img-burger {
+      width: 640px;
+   }
+}
+
+@media (max-width: 980px) {
+   .img-burger {
+      width: 496px;
+      position: absolute;
+      right: -90px;
+      top: 430px;
+   }
+
+   .container {
+      max-width: 738px;
+   }
+
+   .header-logo {
+      width: 150px;
+      height: 48px;
+      background-size: contain;
+   }
+
+   .header-nav {
+      gap: 22px;
+   }
+
+   .header-item {
+      flex-basis: 88%;
+   }
+
+   .bg {
+      margin-bottom: 72px;
+   }
+
+   .banner-box {
+      padding-left: 40px;
+      background-position: -83px center;
+   }
+
+   .menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 15px;
+      margin-bottom: 89px;
+   }
+
+   /* Дополнительно <section class="menu menu-other"> */
+
+   .menu-other .menu-grid-cover,
+   .menu-other .menu-grid-cover img {
+      height: 320px;
+   }
+
+   .menu-other {
+      overflow: hidden;
+      height: 560px;
+   }
+
+   .menu-other .menu-grid {
+      display: flex;
+      width: auto;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      padding-bottom: 50px;
+   }
+
+   .menu-other .menu-grid-item {
+      flex: 0 0 281px;
+   }
+
+
+   .footer-box {
+      display: grid;
+      grid-template-areas: 'a d'
+         'b c';
+      gap: 25px;
+   }
+
+   .footer-item:nth-child(1) {
+      grid-area: a;
+   }
+
+   .footer-item:nth-child(2) {
+      grid-area: b;
+   }
+
+   .footer-item:nth-child(3) {
+      grid-area: c;
+   }
+
+   .footer-item:nth-child(4) {
+      grid-area: d;
+   }
+
+}
+
+@media (max-width: 850px) {
+   .img-burger {
+      display: none;
+   }
+
+   .content {
+      padding: 100px 0;
+   }
+
+   .buy-burger {
+      padding-top: 135px;
+      padding-bottom: 0;
+   }
+}
+
+@media (max-width: 760px) {
+   nav {
+      display: none;
+   }
+
+
+}
+
+@media (max-width: 667px) {
+
+   .menu-grid-cover,
+   .menu-grid-cover img {
+      height: 320px;
+   }
+
+   .footer {
+      padding: 60px 0 65px 0;
+   }
+
+}
+
+@media (max-width: 567px) {
+   .breadcrumbs a {
+      font-size: 14px;
+   }
+
+   .bg-title {
+      font-size: 38px;
+   }
+
+   .bg-text {
+      font-size: 12px;
+   }
+
+   .bg {
+      padding: 55px 0;
+   }
+
+   .banner-box {
+      background-position: 17% center;
+      padding: 35px 0 55px 24px;
+      margin-bottom: 53px;
+   }
+
+   .banner-text {
+      max-width: 300px;
+   }
+
+   .menu-header {
+      margin-bottom: 31px;
+   }
+
+   .menu-title {
+      font-size: 27px;
+   }
+
+   .menu-select {
+      font-size: 12px;
+      padding: 15px;
+      flex-basis: 136px;
+   }
+
+   .menu {
+      margin-bottom: 61px;
+      padding-top: 0;
+   }
+
+   .menu-grid {
+      margin-bottom: 21px;
+      gap: 24px 12px;
+   }
+
+   .menu-other {
+      height: 395px;
+   }
+
+   .menu-other .menu-grid-item {
+      flex: 0 0 200px;
+   }
+
+   .menu-grid-cover {
+      height: 180px;
+   }
+
+   .menu-grid-cover,
+   .menu-grid-cover img,
+   .menu-other .menu-grid-cover,
+   .menu-other .menu-grid-cover img {
+      height: 180px;
+   }
+
+   .menu-grid-title {
+      font-size: 25px;
+      margin: 10px 0;
+   }
+
+   .footer {
+      margin-top: 0;
+   }
+
+   .footer-box {
+      display: grid;
+      grid-template-areas: 'a d'
+         'b b'
+         'c c';
+      gap: 30px;
+   }
+
+   .footer-item h2 {
+      font-size: 18px;
+   }
+}
+
+@media (max-width: 479px) {
+   .menu-grid-title {
+      font-size: 13px;
+   }
+
+   .menu-grid-price {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 359px) {
+   .header-logo {
+      width: 116px;
+      height: 37px;
+   }
+
+   .menu-grid {
+      grid-template-columns: repeat(1, 1fr);
+   }
+
+
+   .menu-grid-title {
+      font-size: 25px;
+   }
+
+
+   .footer-list-tel a {
+      font-size: 18px;
+   }
+}
+
+@media (max-width: 320px) {
+   .banner-box {
+      background-position: 25% center;
+   }
 }
