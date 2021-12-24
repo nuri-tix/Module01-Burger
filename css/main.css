@@ -430,7 +430,7 @@ header {
    opacity: 0.5;
 }
 
-/* style index */
+/* style index.html */
 
 html,
 body {
@@ -675,6 +675,7 @@ body {
 }
 
 @media (max-width: 980px) {
+
    .img-burger {
       display: none;
    }
@@ -799,7 +800,9 @@ body {
       display: none;
    }
 
-
+   .menu-other .container {
+      padding-right: 0;
+   }
 }
 
 @media (max-width: 667px) {
@@ -833,6 +836,7 @@ body {
    }
 
    .bg {
+      margin-bottom: 33px;
       padding: 55px 0;
    }
 
@@ -909,6 +913,10 @@ body {
    .footer-item h2 {
       font-size: 18px;
    }
+
+   .footer-list-tel li {
+      text-align: right;
+   }
 }
 
 @media (max-width: 479px) {
@@ -932,6 +940,10 @@ body {
    .header-logo {
       width: 116px;
       height: 37px;
+   }
+
+   .header {
+      padding: 19px 0;
    }
 
    .menu-grid {
