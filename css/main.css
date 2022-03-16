@@ -981,6 +981,10 @@ body {
    .menu-grid-price {
       font-size: 16px;
    }
+
+   .buy-burger {
+      margin: 50px 0;
+   }
 }
 
 @media (max-width: 400px) {
