@@ -509,7 +509,7 @@ body {
    display: flex;
    justify-content: flex-end;
    position: absolute;
-   /* max-width: 790px; */
+   max-width: 790px;
    width: 100%;
    height: 100%;
    top: 0;
